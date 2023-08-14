@@ -4,6 +4,12 @@
     import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
     import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
     import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
+    import '/src/components/global.css';
+    import { goto } from '$app/navigation';
+
+    const link = (route) => {
+       goto(route);
+    };
 
     // TEXT
     let title = ['CHON-JI', 'DAN-GUN', 'DO-SAN', 'WON-HYO', 'YUL-GOK', 'JOONG-GUN', 'TOI-GYE', 'HWA-RANG', 'CHOONG-MOO'];
@@ -29,18 +35,23 @@
     let controls;
     
     onMount(async () => {
+        let ratio = 3 / 4;
+        let width = Math.floor(window.innerHeight * ratio);
+        let height = Math.floor(window.innerHeight);
+
+        console.log(width, height);
+
         renderer = new THREE.WebGLRenderer({ antialias: true });
-        renderer.setSize( window.innerWidth, window.innerHeight );
-        renderer = new THREE.WebGLRenderer({ antialias: true });
-        renderer.setSize( window.innerWidth, window.innerHeight );
+        renderer.setSize( width, height );
         
         let canvas = renderer.domElement;
         canvas.style.height = '80%';
         canvas.style.width = '80%';
-        canvas.style.margin = '10px';
+        canvas.style.margin = '30px';
         canvas.style.borderRadius = "15px";
-
+        
         container.appendChild(canvas);
+        // console.log(width, height);
 
         const loader = new GLTFLoader();
         renderer.outputColorSpace = THREE.SRGBColorSpace;
@@ -51,11 +62,11 @@
         loader.setDRACOLoader( dLoader );
 
         const scene = new THREE.Scene();
-        scene.background = new THREE.Color( 0x0F0F0F );
+        scene.background = new THREE.Color( 0xffffff );
 
         let clock = new THREE.Clock();
 
-        const camera = new THREE.PerspectiveCamera( 65,  600  * 9/16  / 600, 0.1, 1000 );
+        const camera = new THREE.PerspectiveCamera( 65, ratio, 0.1, 1000 );
         controls = new OrbitControls( camera, renderer.domElement );
         camera.position.set( 0, 0, 5 );
         camera.position.y = 0;
@@ -118,10 +129,14 @@
     }
 </script>
 <p>{title[figura]}</p>
-<p class="description">{description[figura]}</p>
 <svelte:window on:keydown|preventDefault={onKeyDown} />
 <div id="container" bind:this={container} />
+<p class="description">{description[figura]}</p>
+<p on:click={() => link('./')}><i class="arrow left"></i></p>
 
+<div class="background"></div>
+<p id="footer">Copyrigth</p>
+<p id="about">About</p>
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
@@ -133,11 +148,11 @@
     }
 
     p {
-        color: #1A1A1A;
+        color: #ffffff;
         font-family: 'Montserrat', sans-serif;
-        font-weight: bold;
+        font-weight: 600;
         font-size: 30px;
-        margin-top: 10px;
+        margin-top: 35px;
         margin-bottom: 10px;
         margin-left: auto;
         margin-right: auto;
@@ -145,6 +160,9 @@
 
     p.description {
         font-size: 12px;
+        font-weight: 400;
+        margin-top: 10px;
+
     }
 
     div#container { 
@@ -156,4 +174,33 @@
         align-items: center;
         flex-direction: row;
     }        
+
+    p#footer {
+    font-size: 10px;
+    font-weight: normal;
+    position: fixed;
+    bottom: 0;
+    right: 15%;
+    margin-bottom: 20px;
+    }
+    p#about {
+        font-size: 10px;
+        font-weight: normal;
+        position: fixed;
+        bottom: 0;
+        left: 15%;
+        margin-bottom: 20px;
+    }
+    .arrow {
+        position: fixed;
+        top: 5%;
+        left: 15%;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 6px;
+        transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+    }
+
 </style>

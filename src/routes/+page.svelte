@@ -8,24 +8,40 @@
     };
 </script>
 
-<p>Tae Kwon Do Evolution</p>
+<!-- <p>Tae Kwon Do Evolution</p> -->
 <!-- <p>Evolution</p> -->
 
 <p id="footer">Copyrigth</p>
 <p id="about">About</p>
 
+<div class="background"></div>
+
 <div class="buttons">
     <button type="button" class="btn" on:click={() => link('./menu')}>Entrenar</button>
-    <button type="button" class="btn" on:click={() => link('./menu/galeria')}>Galeria</button>
-    <button type="button" class="btn" on:click={() => link('./menu/about')}>Quienes somos</button>
+    <!-- <button type="button" class="btn" on:click={() => link('./menu/galeria')}>Galeria</button>
+    <button type="button" class="btn" on:click={() => link('./menu/about')}>Quienes somos</button> -->
 </div>
 
 <style>
+
+    .background {
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        transform: translate(0, -70%);
+        /* background-color: #dc4c64; */
+        background-image: url('/assets/TE_Logo.png');
+        opacity: 90%;
+        background-size: 90%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
     .buttons {
         position: absolute;
-        top: 50%;
+        top: 70%;
         left: 50%;
-        width: 100%;
+        width: 50%;
         transform: translate(-50%, -50%);
         display: flex;
         flex-direction: column;
@@ -38,9 +54,8 @@
     font-weight: 500;
     font-size: 15px;
     color: #fff;
-    color: #285192;
+    color: #dc4c64;
     /* background-color: #dc4c64; */
-    /* background-color: #e3ebf7; */
     background-color: #e3ebf7;
     padding: 10px 40px;
     border: solid #e3ebf7 1px;
@@ -65,4 +80,5 @@
     color: #0066cc;
     border: none;
     }
+    
 </style>

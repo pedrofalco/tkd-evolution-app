@@ -17,7 +17,6 @@
     });
 </script>
 
-<p>Entrenar?</p>
 <!-- <p id="subtitulo">La mejor forma de entrenar</p> -->
 
 
@@ -31,18 +30,23 @@
 <div class="buttons">
   <button type="button" class="btn" on:click={() => link('./menu/entrenamiento-tecnico')}>Entrenamiento Técnico</button>
   <button type="button" class="btn" on:click={() => link('./menu/entrenamiento-deportivo')}>Entrenamiento Deportivo</button>
+  <button type="button" class="btn" on:click={() => link('./menu/galeria')}>Galería</button>
 </div>
 
+<div class="background"></div>
+
+<p on:click={() => link('./')}><i class="arrow left"></i></p>
 <p id="footer">Copyrigth</p>
 <p id="about">About</p>
 
 <style>
+
   .buttons {
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 100%;
-      transform: translate(-50%, -50%);
+      width: 75%;
+      transform: translate(-50%, -70%);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -54,7 +58,7 @@
   font-weight: 500;
   font-size: 15px;
   color: #fff;
-  color: #285192;
+  color: #C1272D;
   /* background-color: #dc4c64; */
   /* background-color: #e3ebf7; */
   background-color: #e3ebf7;
@@ -68,6 +72,7 @@
   cursor: pointer;
   margin: 10px;
   transition : 0ms;
+  width: 100%;
 
   /* text-transform: lowercase; */
   }

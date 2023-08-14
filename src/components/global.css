@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;700;800&display=swap');
 
@@ -6,28 +6,35 @@ body {
     display: flex;
     /* background-color: #0071BC; */
     background-color: #4884D7;
-    background-image: url('/assets/TE-vertical2.png');
+    /* background-image: url('/assets/TE-vertical2.png'); */
     background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
     
 }
-img {
-    width: 300px;
-    margin: 10px;
-    cursor: pointer; 
+.background {
+    position: absolute;
+    width: 15%;
+    height: 15%;
+    /* background-color: #dc4c64; */
+    background-image: url('/assets/TE_Logo.png');
+    opacity: 90%;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+    bottom: 0px;
 }
 p {
     font-family: 'Montserrat', sans-serif;
     /* font-family: 'Inter', sans-serif; */
-    font-weight: 600;
+    font-weight: 500;
     color: #fff;
     font-size: 40px;
     text-align: center;
-    line-height: 125%;
+    line-height: 100%;
     letter-spacing: -.025em;
-    margin-top: 20px;
+    margin-top: 40px;
     margin-bottom: 20px;
 }
 
@@ -49,4 +56,15 @@ p#about {
     position: fixed;
     bottom: 0;
     left: 15%;
+}
+.arrow {
+    position: fixed;
+    top: 5%;
+    left: 15%;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 6px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
 }
