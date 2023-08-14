@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;700;800&display=swap');
+
+body {
+    display: flex;
+    /* background-color: #0071BC; */
+    background-color: #4884D7;
+    background-image: url('/assets/TE-vertical2.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+img {
+    width: 300px;
+    margin: 10px;
+    cursor: pointer; 
+}
+p {
+    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Inter', sans-serif; */
+    font-weight: 600;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    line-height: 125%;
+    letter-spacing: -.025em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+p#subtitulo {
+    font-size: 15px;
+    font-weight: normal;
+    margin: 0;
+}
+p#footer {
+    font-size: 10px;
+    font-weight: normal;
+    position: fixed;
+    bottom: 0;
+    right: 15%;
+}
+p#about {
+    font-size: 10px;
+    font-weight: normal;
+    position: fixed;
+    bottom: 0;
+    left: 15%;
+}
