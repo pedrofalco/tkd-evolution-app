@@ -160,7 +160,7 @@
 </script>
 
 <!-- Centered Container -->
-<div bind:this={container} class="flex flex-col items-center justify-center gap-10 md:w-full h-full mx-4">
+<div bind:this={container} class="flex flex-col items-center justify-center gap-10 w-full h-full">
     <p class="text-3xl font-semibold text-center">{title[figura]}</p>
     <div class="relative">
         <!-- <button on:click={toggleFullscreen} class="absolute right-0 bottom-0 text-black">
@@ -170,13 +170,13 @@
             <img src="/fullscreen.svg" alt="fullscreen">
             {/if}
         </button> -->
-        <canvas bind:this={canvas} class="w-full rounded-sm"></canvas>
+        <canvas bind:this={canvas} class="w-full rounded-sm mx-auto"></canvas>
     </div>
     <p class="text-center text-sm">{description[figura]}</p>
 
-    <div class="flex items-center justify-between w-full gap-2 mb-4">
-        <button class="flex-1 bg-slate-200 text-red-700 px-2 py-1 font-medium rounded-full" on:click={()=> controls.reset()} >Reset Camara</button>
-        <button class="flex-1 bg-slate-200 text-red-700 px-2 py-1 font-medium rounded-full" on:click={()=> action.reset()}>Reset Figura</button>
+    <div class="flex items-center justify-between md:justify-center w-full gap-2 mb-4 px-4">
+        <button class="flex-1 md:flex-none md:w-40 bg-slate-200 text-red-700 px-2 py-1 font-medium rounded-full" on:click={()=> controls.reset()} >Reset Camara</button>
+        <button class="flex-1 md:flex-none md:w-40 bg-slate-200 text-red-700 px-2 py-1 font-medium rounded-full" on:click={()=> action.reset()}>Reset Figura</button>
     </div>
     
 </div>
