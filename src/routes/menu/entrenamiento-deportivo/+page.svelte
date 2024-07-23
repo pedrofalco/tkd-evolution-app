@@ -1,10 +1,5 @@
-<script>
-    import '/src/components/global.css';
-    import { goto } from '$app/navigation';
+<div class="flex flex-col gap-4">
+    <a class="bg-slate-200 text-red-700   px-8 py-1 rounded-full" href="/menu/entrenamiento-deportivo/competencia-individual">Competencia Individual</a>
+    <a class="bg-slate-200 text-red-700   px-8 py-1 rounded-full" href="/menu/entrenamiento-deportivo/competencia-grupal">Competencia Grupal</a>
+</div>
 
-    const link = (route) => {
-       goto(route);
-    };
-</script>
-
-<p>Entrenamiento Deportivo</p>
