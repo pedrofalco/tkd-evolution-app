@@ -68,10 +68,10 @@
 
         const loader = new GLTFLoader(manager);
         const dLoader = new DRACOLoader();
-        dLoader.setDecoderPath('draco/');
+        dLoader.setDecoderPath('/draco/');
         dLoader.setDecoderConfig({ type: 'js' });
         loader.setDRACOLoader(dLoader);
-        loader.load('assets/test_competidor_04_compress.glb', gltf => {
+        loader.load('/assets/test_competidor_04_compress.glb', gltf => {
             model = gltf.scene;
             scene.add(model);
             
