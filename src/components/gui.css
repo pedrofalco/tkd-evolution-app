@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;700;800&display=swap');
+
+.lil-gui {
+    --width: 90%;
+    /* ‑‑name‑width: 100%; */
+    --background-color: #202127d2;
+    --title-background-color: #111114;
+    --font-family: 'Montserrat', sans-serif;
+    --font-size: 10px;
+}
+
+.lil-gui.allow-touch-styles.root.autoPlace {
+    position: fixed;
+    /* --title-height: 0%; */
+    bottom: 0%;
+    top: 79%;
+}
+
+.lil-gui.allow-touch-styles.root.autoPlace.closed {
+    position: fixed;
+    /* --title-height: 0%; */
+    
+    bottom: 0%;
+    top: auto;
+}
+
+.lil-gui.closed>.title:before {
+  transform: rotate(-90deg);
+}
+.lil-gui .title {
+    position: fixed;
+    width: 90%;
+    bottom: 0;
+    font-size:10px;
+    --title-height: 20px;
+    text-align: center;
+    /* --title-height: calc(var(--widget-height) + var(--spacing)*1.5); */
+    /* top: 100%; */
+}
+
+
+.lil-gui .children {
+    position: fixed;
+    /* --title-height: 0%; */
+    bottom: 3%;
+    --widget-height: 22px;
+    width: 90%;
+    /* top: 100%; */
+}
+

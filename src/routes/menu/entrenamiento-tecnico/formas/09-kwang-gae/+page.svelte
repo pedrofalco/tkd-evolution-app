@@ -1,5 +1,5 @@
 <script>
     import Figura from '/src/components/Figura.svelte';
 </script>
-<!-- <Loading /> -->
-<Figura figura={0} />
+
+<Figura figura={9} />

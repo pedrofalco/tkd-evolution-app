@@ -1,1 +1,4 @@
-<h1>Galeria</h1>
+<script>
+	import Construccion from "/src/components/Construccion.svelte";
+</script>
+<Construccion/>
